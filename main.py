@@ -4,7 +4,7 @@ d = 0
 dd = 0
 nd = 100
 n = randint(1, nd)
-pp = 10
+pp = 9
 name = input("Никнейм : ")
 print("Найдите задуманное число "+name)
 
@@ -17,7 +17,7 @@ while True:
         if inp == "0":
             break
         if inp == "1":
-            pp=10
+            pp=9
             n = randint(1, nd)
             continue
 
@@ -28,8 +28,8 @@ while True:
         if inp == "0":
             break
         elif inp == "1":
-            nd+=100
-            pp=10
+            nd+=200
+            pp=9
             n = randint(1, nd)
             continue
         else:
