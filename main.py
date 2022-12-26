@@ -5,15 +5,15 @@ dd = 0
 nd = 100
 n = randint(1, nd)
 pp = 10
-name = input("Ismiz nima? : ")
-print("Ugadayka oyiniga hush kelibsiz, "+name)
-print("Man bir son oyladim, topib korinchi uni!")
+name = input("Никнейм : ")
+print("Найдите задуманное число "+name)
+
 while True:
-    a = int(input("Nechchi deb oylaysiz: "))
+    a = int(input("Сколько вы думаете: "))
     if pp == -1:
         dd+=1
-        print("Imkoniyatlariz tugadi.")
-        inp = input("Yana oynash uchun 1-ni tering, chiqish uchun 0-ni: ")
+        print("Game over")
+        inp = input("Чтобы ещё раз поиграть нажмите 1,а если сдались то 0 ")
         if inp == "0":
             break
         if inp == "1":
@@ -23,8 +23,8 @@ while True:
 
     if a==n:
         d+=1
-        print(f"Toptiz! Malades {name}! Siz {d} marta yuta oldiz va {dd} marta yutqizdiz!")
-        inp = input("Yana oynash uchun 1-ni tering, chiqish uchun 0-ni: ")
+        print(f"Нашли! Не впечатляет {name}! Вы выиграли {d} раз ,и проиграли  {dd} ")
+        inp = input("Попробуйте 1  ")
         if inp == "0":
             break
         elif inp == "1":
@@ -33,10 +33,10 @@ while True:
             n = randint(1, nd)
             continue
         else:
-            print("Boshidan urunib korin!")
+            print("Попробуйте ещё раз!")
     elif a < n:
-        print("Mani sonim kottaroq")
+        print("Моё число больше")
         pp-=1
     elif a > n:
-        print("Mani sonim kichikroq")
+        print("Моё число меньше")
         pp-=1
